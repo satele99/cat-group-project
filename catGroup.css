@@ -61,4 +61,9 @@ html {
 
 .bttm {
     text-align: center;
+} 
+
+.cat-names:hover {
+    cursor: pointer;
+    color: blueviolet;
 }
