@@ -24,4 +24,11 @@ function getNames(object) {
         }
         getNamesDone = true;
     }
-}
+};
+
+function sliderValue(input, span) {
+    let slider = document.getElementById(input);
+    let num = document.getElementById(span);
+
+    num.innerText = slider.value;
+};
