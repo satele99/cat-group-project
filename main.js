@@ -1,7 +1,8 @@
 let catNames = document.getElementById('cat-names');
 let catLink = "https://api.thecatapi.com/v1/breeds"; 
 let getNamesDone = false;
-let getDescDone = false;
+let getDescDone = false; 
+console.log('amir branch');
 
 function callApi() {
    axios.get(catLink).then(response => {
