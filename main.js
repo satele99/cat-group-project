@@ -20,14 +20,35 @@ function getDescription(id, object) {
         console.log(object[id].name);
         let catDescription = document.getElementById('cat-description');
         let des = document.createElement('div');
+        let div2 = document.createElement('div');
         let imgButton = document.createElement('button');
         catDescription.appendChild(des);
         des.innerText = object[id].description;
-        des.appendChild(imgButton);
+        des.appendChild(div2);
+        div2.appendChild(imgButton);
         imgButton.innerText = "See Image";
-        imgButton.setAttribute('onclick', 'getImage()');
+        imgButton.id = id
+        imgButton.setAttribute('onclick', "getImage("+imgButton.id+")");
         getDescDone = true;
     }
+}
+function getImage(num) {
+    axios.get(catLink).then(response => {
+        let imgId = "";
+        for(i =0; i < response.data.length; i++) {
+            if(num == i){
+                imgId = response.data[num].id;
+            }
+        }
+        axios.get('https://api.thecatapi.com/v1/images/search?breed_ids='+imgId).then(response => {
+            let catImage = document.getElementById('cat-image');
+            let imgTag = document.createElement('img');
+
+            catImage.appendChild(imgTag);
+            imgTag.setAttribute('src', response.data[0].url);
+            imgTag.className = 'image';
+        })
+    })
 }
 function getNames(object) {
     catNames = document.getElementById('cat-names');
