@@ -9,16 +9,20 @@
 
             <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
 
-    <title>Find Me A PUSSYCAT</title>
+    <title></title>
   </head>
   <body>
     <!-- <h1>FIND ME A PUSSYCAT!!</h1> -->
     <div class="container-fluid">
         <div class="nav justify-content-center"><h1>FIND ME A PUSSYCAT</h1></div>
 
-        <div class = 'nameSake'><button type="button" class="btn btn-info" onclick="callApi()">NAMES</button></div>
+        <!-- <div class = 'nameSake'><button type="button" class="btn btn-info">NAMES</button></div> -->
+
+                <!-- This is the cursor for the cat -->
+        <div align="center" style="z-index:9;visibility:visible;">
+            <!-- <a href="https://www.totallyfreecursors.com/" target="_blank" class="tfc"><img src="https://downloads.totallyfreecursors.com/public/CursorsLogo88-31.gif" border="0" width="88" height="31" alt="Free Cat Cursors at www.totallyfreecursors.com" /></a></div> -->
+            <style>HTML,BODY{cursor: url("https://downloads.totallyfreecursors.com/cursor_files/cat11.ani"), url("https://downloads.totallyfreecursors.com/thumbnails/cat12.gif"), auto;}</style>
 
         <div class = 'row'>
 
@@ -27,28 +31,36 @@
                 <div class = 'box b col-sm filt'>FITLER</div>
 
                     <!-- These are designed to collapsed the yes and no buttons for the filters -->
-                <div class = "box b col-sm"><button class = 'btn btn-info' aria-expand = 'false' aria-controls = 'hairless' data-target = '#hairless' data-toggle = 'collapse'>ENERGY LEVELS: </button> 
+                <div class = "box b col-sm"><button class = 'btn btn-info' aria-expand = 'false' aria-controls = 'hairless' data-target = '#hairless' data-toggle = 'collapse'>HAIRLESS: </button> 
                     <p class = 'collapse' id = 'hairless'><input type="range" min="0" max="5" value="0" id="slider" oninput="sliderValue('slider', 'value')"><span id="value">0</span></p>
                 </div>
                 <div class = "box b col-sm"><button class = 'btn btn-info' aria-expand = 'false' aria-controls = 'rare' data-target = '#rare' data-toggle = 'collapse'>AFFECTION: </button> 
                     <p class = 'collapse' id = 'rare'><input type="range" min="0" max="5" value="0" id="slider2" oninput="sliderValue('slider2', 'value2')"><span id="value2">0</span></p>
                 </div>
-                <div class = "box b col-sm"><button class = 'btn btn-info' aria-expand = 'false' aria-controls = 'filler' data-target = '#filler' data-toggle = 'collapse'>FILLER: </button> 
+                <div class = "box b col-sm"><button class = 'btn btn-info' aria-expand = 'false' aria-controls = 'filler' data-target = '#filler' data-toggle = 'collapse'>INTELLIGENCE: </button> 
                     <p class = 'collapse' id = 'filler'><input type="range" min="0" max="5" value="0" id="slider3" oninput="sliderValue('slider3', 'value3')"><span id="value3">0</span></p>
                 </div>
                 <div class = "box b col-sm"><button class="btn btn-info" aria-expand = 'false' aria-controls = 'number' data-target = '#number' data-toggle = 'collapse'>LIFE SPAN:</button>
                     <p class = 'collapse' id = 'number'><input type="range" min="1" max="18" value="1" id="slider4" oninput="sliderValue('slider4', 'value4')"><span id="value4">1</span>
                 </div>
+                    <!-- Added this to the bttm of the list -->
+                <div class = 'box b col-sm nameSake'><button type="button" class="btn btn-info" onclick="callApi()">NAMES</button></div>
             </div>
 
                <!-- The separate boxes for the cat info and image -->
-               <div class = 'box a col-sm' id="cat-names">CAT NAMES</div>
-               <div class = 'box a col-sm' id="cat-description">CAT DESCRIPTION</div>
-               <div class = 'box a col-sm' id="cat-image">CAT IMAGE</div>
+                    <!-- This is just so you can see the scrolling of the div -->
+               <div class = 'box a col-sm' style = "height:300px;width:120px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;" id="cat-names">CAT NAMES <br>
+                </div>
+               <div class = 'box a col-sm'style = "height:300px;width:120px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;" id="cat-description">CAT DESCRIPTION <br>
+                
+                </div>
+                <div class = 'box a col-sm' style = "height:300px;width:120px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;" id="cat-image">CAT IMAGE <br>
+                </div> 
+                
         </div>
                     <!-- This will be the reset button fixed at the bottom of the screen -->
         <footer>
-            <div class = 'fixed-bottom bttm'><button type="button" class="btn btn-secondary ">RESET</button></div>
+            <div class = 'fixed-bottom bttm'><button type="button" class="btn btn-secondary " onclick="reset()">RESET</button></div>
         </footer>
         
     </div>

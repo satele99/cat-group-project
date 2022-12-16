@@ -93,7 +93,10 @@ function getNames(object) {
         }
         getNamesDone = true;
     }
-};
+}; 
+function reset() {
+    location.reload();
+}
 
 function sliderValue(input, span) {
     let slider = document.getElementById(input);
