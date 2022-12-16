@@ -46,6 +46,8 @@ function getImage(num) {
 
             catImage.appendChild(imgTag);
             imgTag.setAttribute('src', response.data[0].url);
+            imgTag.setAttribute('width', 253);
+            imgTag.setAttribute('height', 210);
             imgTag.className = 'image';
         })
     })
