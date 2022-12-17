@@ -3,6 +3,7 @@ let catLink = "https://api.thecatapi.com/v1/breeds";
 let getNamesDone = false;
 let getDescDone = false; 
 let getImgDone = false;
+let foundResult = false;
 
 
 function callApi() {
@@ -89,21 +90,23 @@ function getImage(num) {
 }
 function getNames(object) {
     catNames = document.getElementById('cat-names');
+    let catBreed = document.createElement('div');
     let slider = document.getElementById('slider');
     let slider2 = document.getElementById('slider2');
     let slider3 = document.getElementById('slider3');
     let slider4 = document.getElementById('slider4');
+    
 
     if(getNamesDone == false){
         for(i = 0; i < object.length; i++){
-            let catBreed = document.createElement('div');
+            catBreed = document.createElement('div');
             let hyperLink = document.createElement('a');
-            let x = 0;
 
             if ((slider.value == 0) &&
                 (slider2.value == 0) &&
                 (slider3.value == 0) &&
                 (slider4.value == 0)) {
+                    console.log('no filter entered')
                     catNames.appendChild(catBreed);
                     catBreed.className = 'cat-names';
                     catBreed.appendChild(hyperLink);
@@ -111,25 +114,37 @@ function getNames(object) {
                     hyperLink.id = i;
                     hyperLink.setAttribute('onclick', "getApi("+hyperLink.id+")");
                     hyperLink.className = 'cat-names';
+                    foundResult = true;
                 
-            } else if (slider.value == object[i].energy_level){
-                if (slider2.value == object[i].affection_level){
-                    if(slider3.value == object[i].intelligence) {
-                        if(slider4.value == object[i].child_friendly)
-                        catNames.appendChild(catBreed);
-                        catBreed.className = 'cat-names';
-                        catBreed.appendChild(hyperLink);
-                        hyperLink.innerText = object[i].name;
-                        hyperLink.id = i;
-                        hyperLink.setAttribute('onclick', "getApi("+hyperLink.id+")");
-                        hyperLink.className = 'cat-names';
-                        console.log(x + " all filters set are true");
+            } else if (slider.value == object[i].energy_level)
+            {
+                if (slider2.value == object[i].affection_level)
+                {
+                    if(slider3.value == object[i].intelligence) 
+                    {
+                        if(slider4.value == object[i].child_friendly) 
+                        {
+                            catNames.appendChild(catBreed);
+                            catBreed.className = 'cat-names';
+                            catBreed.appendChild(hyperLink);
+                            hyperLink.innerText = object[i].name;
+                            hyperLink.id = i;
+                            hyperLink.setAttribute('onclick', "getApi("+hyperLink.id+")");
+                            hyperLink.className = 'cat-names';
+                            foundResult = true;
+                        }
                     }
                 }
             }
         }
+        if(foundResult == false) {
+            catNames.appendChild(catBreed);
+            catBreed.className = 'cat-names';
+            catBreed.innerText = 'No Matches Found! Click to Refresh.';
+            catBreed.setAttribute('onclick', 'reset()');
+        }
         getNamesDone = true;
-    } 
+    }
 }; 
 function reset() {
     location.reload();
