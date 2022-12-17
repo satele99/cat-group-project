@@ -17,20 +17,34 @@ function getApi(id) {
 }
 function getDescription(id, object) {
     if (getDescDone == false) {
-        console.log(object[id].name);
+        // console.log(object[id].name);
         let catDescription = document.getElementById('cat-description');
         let des = document.createElement('div');
         let div2 = document.createElement('div');
         let imgButton = document.createElement('button');
         catDescription.appendChild(des);
+        des.id = 'desc-div';
         des.innerText = object[id].description;
         des.appendChild(div2);
+        div2.id = 'desc-img';
         div2.appendChild(imgButton);
         imgButton.innerText = "See Image";
         imgButton.id = id
         imgButton.setAttribute('onclick', "getImage("+imgButton.id+")");
         getDescDone = true;
     }
+    // else if (getDescDone == true) {
+    //     let dynDiv = document.getElementById('desc-div');
+    //     let imgDiv = document.getElementById('desc-img');
+    //     let div3 = document.createElement('div');
+    //     let imgButton2 = document.createElement('button');
+    //     dynDiv.innerText = object[id].description;
+    //     dynDiv.appendChild(imgDiv);
+    //     div3.appendChild(imgButton2);
+    //     imgButton2.innerText = "See Image";
+    //     imgButton2.id = id
+    //     imgButton2.setAttribute('onclick', "getImage("+imgButton2.id+")");
+    // }
 }
 function getImage(num) {
     axios.get(catLink).then(response => {
@@ -88,8 +102,11 @@ function getNames(object) {
                         console.log(x + " all filters set are true");
                     }
                 }
-            }
-            
+            }else {
+                catNames.appendChild(catBreed);
+                catBreed.innerText = 'No Results Found';
+                break
+            } 
         }
         getNamesDone = true;
     }

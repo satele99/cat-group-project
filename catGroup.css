@@ -37,7 +37,7 @@ html {
     margin: 10px;
     text-align: center;
     background-color: black;
-    opacity: 70%;
+    opacity: 90%;
     color: white;
     border-radius: 25px;
 }
@@ -68,6 +68,3 @@ html {
     color: blueviolet;
 }
 
-.image {
-    object-fit: contain;
-}
