@@ -43,7 +43,12 @@
 
                <!-- The separate boxes for the cat info and image -->
                     <!-- This is just so you can see the scrolling of the div -->
-               <div class = 'box a col-sm' style = "height:300px;width:120px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;" id="cat-names"><h3>APPLICATION</h3> <br>
+               <div class = 'box a col-sm' style = "height:300px;width:120px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;" id="cat-names">
+                    <!-- Sticky header so its not moving when scrolling -->
+                    <nav class="navbar justify-content-center sticky-top navbar-dark bg-dark">
+                        <a class="navbar-brand " href="#"><h3>Application</h3></a>
+                      </nav>
+                        <br>
                 </div>
                 
         </div>
