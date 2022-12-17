@@ -22,9 +22,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 <a class="nav-item nav-link" href= 'groom.html'>Grooming</a>
-                <a class="nav-item nav-link" href="app.html">Application</a>
+                <a class="nav-item nav-link active" href="app.html">Application</a>
                 <a class="nav-item nav-link" href="#">Contact Us</a>
               </div>
             </div>
@@ -41,36 +41,10 @@
 
         <div class = 'row'>
 
-                    <!-- This is the first column for the filters -->
-            <div class = 'col-sm-2 c column1'> 
-                <div class = 'box b col-sm filt'>FITLER</div>
-
-                    <!-- These are designed to collapsed the yes and no buttons for the filters -->
-                <div class = "box b col-sm"><button class = 'btn btn-info' aria-expand = 'false' aria-controls = 'hairless' data-target = '#hairless' data-toggle = 'collapse'>HAIRLESS: </button> 
-                    <p class = 'collapse' id = 'hairless'><input type="range" min="0" max="5" value="0" id="slider" oninput="sliderValue('slider', 'value')"><span id="value">0</span></p>
-                </div>
-                <div class = "box b col-sm"><button class = 'btn btn-info' aria-expand = 'false' aria-controls = 'rare' data-target = '#rare' data-toggle = 'collapse'>AFFECTION: </button> 
-                    <p class = 'collapse' id = 'rare'><input type="range" min="0" max="5" value="0" id="slider2" oninput="sliderValue('slider2', 'value2')"><span id="value2">0</span></p>
-                </div>
-                <div class = "box b col-sm"><button class = 'btn btn-info' aria-expand = 'false' aria-controls = 'filler' data-target = '#filler' data-toggle = 'collapse'>INTELLIGENCE: </button> 
-                    <p class = 'collapse' id = 'filler'><input type="range" min="0" max="5" value="0" id="slider3" oninput="sliderValue('slider3', 'value3')"><span id="value3">0</span></p>
-                </div>
-                <div class = "box b col-sm"><button class="btn btn-info" aria-expand = 'false' aria-controls = 'number' data-target = '#number' data-toggle = 'collapse'>LIFE SPAN:</button>
-                    <p class = 'collapse' id = 'number'><input type="range" min="1" max="18" value="1" id="slider4" oninput="sliderValue('slider4', 'value4')"><span id="value4">1</span>
-                </div>
-                    <!-- Added this to the bttm of the list -->
-                <div class = 'box b col-sm nameSake'><button type="button" class="btn btn-info" onclick="callApi()">NAMES</button></div>
-            </div>
-
                <!-- The separate boxes for the cat info and image -->
                     <!-- This is just so you can see the scrolling of the div -->
-               <div class = 'box a col-sm' style = "height:300px;width:120px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;" id="cat-names">CAT NAMES <br>
+               <div class = 'box a col-sm' style = "height:300px;width:120px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;" id="cat-names"><h3>APPLICATION</h3> <br>
                 </div>
-               <div class = 'box a col-sm'style = "height:300px;width:120px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;" id="cat-description">CAT DESCRIPTION <br>
-                
-                </div>
-                <div class = 'box a col-sm' style = "height:300px;width:120px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;" id="cat-image">CAT IMAGE <br>
-                </div> 
                 
         </div>
                     <!-- This will be the reset button fixed at the bottom of the screen -->

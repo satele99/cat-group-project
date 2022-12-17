@@ -5,21 +5,27 @@
     background-repeat: no-repeat;
     background-position: center;
     background-color:turquoise;
+    height: 650px;
 }
 
 html {
-    margin-top: 50px;
-    background-image:url('https://media.cnn.com/api/v1/images/stellar/prod/190517103414-01-grumpy-cat-file-restricted.jpg?q=w_3000,h_2049,x_0,y_0,c_fill');
-    background-size: 1000px;
-    background-repeat: no-repeat;
-    background-position: center;
     background-color:turquoise;
 }
 
 .nav {
     display: flex;
-    padding: 30px;
+    flex-direction:row;
+    padding: 10px;
     color: white;
+    background-color: black;
+    opacity: 90%;  
+}
+
+.navbar {
+    display: flex;
+    opacity: 90%;
+    color: white;
+    background-color: black;
 }
 
 .column1 {
@@ -29,15 +35,21 @@ html {
     align-items: center;
 }
 
+
+.c {
+    margin-top: 100px;
+}
+
 .a {
     flex: 1;
     align-items: center;
     border-style:inset;
     padding: 10px;
-    margin: 10px;
+    margin-top: 100px;
+    margin-right: 10px;
     text-align: center;
     background-color: black;
-    opacity: 70%;
+    opacity: 90%;
     color: white;
     border-radius: 25px;
 }
@@ -66,4 +78,8 @@ html {
 .cat-names:hover {
     cursor: pointer;
     color: blueviolet;
+}
+
+.image {
+    object-fit: contain;
 }
