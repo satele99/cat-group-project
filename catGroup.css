@@ -35,11 +35,6 @@ html {
     align-items: center;
 }
 
-
-.c {
-    margin-top: 100px;
-}
-
 .a {
     flex: 1;
     align-items: center;
@@ -63,6 +58,11 @@ html {
 .b {
     padding: 5px;
 }
+
+.c {
+    margin-top: 100px;
+}
+
 
 .nameSake {
     display: flex;
