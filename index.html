@@ -31,7 +31,7 @@
                 <div class = 'box b col-sm filt'>FITLER</div>
 
                     <!-- These are designed to collapsed the yes and no buttons for the filters -->
-                <div class = "box b col-sm"><button class = 'btn btn-info' aria-expand = 'false' aria-controls = 'hairless' data-target = '#hairless' data-toggle = 'collapse'>HAIRLESS: </button> 
+                <div class = "box b col-sm"><button class = 'btn btn-info' aria-expand = 'false' aria-controls = 'hairless' data-target = '#hairless' data-toggle = 'collapse'>ENERGY LEVELS: </button> 
                     <p class = 'collapse' id = 'hairless'><input type="range" min="0" max="5" value="0" id="slider" oninput="sliderValue('slider', 'value')"><span id="value">0</span></p>
                 </div>
                 <div class = "box b col-sm"><button class = 'btn btn-info' aria-expand = 'false' aria-controls = 'rare' data-target = '#rare' data-toggle = 'collapse'>AFFECTION: </button> 
@@ -40,8 +40,8 @@
                 <div class = "box b col-sm"><button class = 'btn btn-info' aria-expand = 'false' aria-controls = 'filler' data-target = '#filler' data-toggle = 'collapse'>INTELLIGENCE: </button> 
                     <p class = 'collapse' id = 'filler'><input type="range" min="0" max="5" value="0" id="slider3" oninput="sliderValue('slider3', 'value3')"><span id="value3">0</span></p>
                 </div>
-                <div class = "box b col-sm"><button class="btn btn-info" aria-expand = 'false' aria-controls = 'number' data-target = '#number' data-toggle = 'collapse'>LIFE SPAN:</button>
-                    <p class = 'collapse' id = 'number'><input type="range" min="1" max="18" value="1" id="slider4" oninput="sliderValue('slider4', 'value4')"><span id="value4">1</span>
+                <div class = "box b col-sm"><button class="btn btn-info" aria-expand = 'false' aria-controls = 'number' data-target = '#number' data-toggle = 'collapse'>CHILD FRIENDLY:</button>
+                    <p class = 'collapse' id = 'number'><input type="range" min="1" max="5" value="0" id="slider4" oninput="sliderValue('slider4', 'value4')"><span id="value4">0</span>
                 </div>
                     <!-- Added this to the bttm of the list -->
                 <div class = 'box b col-sm nameSake'><button type="button" class="btn btn-info" onclick="callApi()">SEARCH</button></div>
