@@ -24,8 +24,8 @@
               <div class="navbar-nav">
                 <a class="nav-item nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 <a class="nav-item nav-link" href= 'groom.html'>Grooming</a>
-                <a class="nav-item nav-link active" href="app.html">Application</a>
-                <a class="nav-item nav-link" href="contact.html">Contact Us</a>
+                <a class="nav-item nav-link" href="app.html">Application</a>
+                <a class="nav-item nav-link active" href="contact.html">Contact Us</a>
               </div>
             </div>
         </nav>
@@ -43,14 +43,28 @@
 
                <!-- The separate boxes for the cat info and image -->
                     <!-- This is just so you can see the scrolling of the div -->
-               <div class = 'box a col-sm' style = "height:300px;width:120px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;" id="cat-names">
-                    <!-- Sticky header so its not moving when scrolling -->
-                    <nav class="navbar justify-content-center sticky-top navbar-dark bg-dark">
-                        <a class="navbar-brand " href="#"><h3>Application</h3></a>
-                      </nav>
+               <div class = 'box a col-sm' style = "height:500px;width:120px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;" id="cat-names">
+                <!-- Sticky header so its not moving when scroll -->
+                <nav class="navbar justify-content-center sticky-top navbar-dark bg-dark">
+                    <a class="navbar-brand " href="#"><h3>Contact Information</h3></a>
+                  </nav>
+                    <br>
+                    <p>Please leave a reliable number and email <br>with a short description and we will get back to you.</p> 
+                    <br>
+                <form>
+                    <label for = "full_Name">Full Name: </label><input type = 'text' id = 'full_Name' aria-describedby="name-format" name = 'bName' required aria-required=”true”><br>
+                    <label for = 'phone_Num'>Phone Number: </label><input type = 'tel' id = 'phone_Num' name = 'phone_Num' pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required> <br>
+                    <label for="email">Email:</label><input type="email" id="email" pattern=".+@globex\.com" size="30" required>   
                         <br>
+                    Description:
+                        <br>
+                    <textarea></textarea>
+                        <br>
+                    <input type = 'submit' value = 'submit'>
+                </form>
+
                 </div>
-                
+               <!-- <div class = 'box a col-sm'style = "height:300px;width:120px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;" id="cat-description">CAT DESCRIPTION <br>       -->
         </div>
                     <!-- This will be the reset button fixed at the bottom of the screen -->
         <footer>

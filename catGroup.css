@@ -83,3 +83,9 @@ html {
 .image {
     object-fit: contain;
 }
+
+textarea {
+    resize: none;
+    height: 200px;
+    width: 350px;
+}
