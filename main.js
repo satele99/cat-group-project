@@ -60,3 +60,5 @@ function sliderValue(input, span) {
 
     num.innerText = slider.value;
 }; 
+
+// the end. :)
