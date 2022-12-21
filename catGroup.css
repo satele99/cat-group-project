@@ -67,3 +67,7 @@ html {
     cursor: pointer;
     color: blueviolet;
 }
+
+.image {
+    object-fit: contain;
+}
