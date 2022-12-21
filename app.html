@@ -50,10 +50,11 @@
                       </nav>
                         <br>
                         <form class="app">
-                          <div> Name: <input type ="text" id="aname" value ="" maxlength = "50" /></label><br></div>
+                          <p>Submit an Application to get connected with your dream cat!</p>
+                          <div> Name: <input type ="text" id="aname" value ="" maxlength = "50" required/></label><br></div>
                           <div>
                              <label for = 'rating'>Number of Children:</label>
-                              <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                              <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required>
                                     <option value="1">0</option>
                                     <option value="2">1-2</option>
                                     <option value="3">3+</option>
@@ -62,43 +63,35 @@
                              </div>
                              <div>
                               <label for = 'rating'>Number of Pets:</label>
-                               <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                               <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required>
                                  <option value="1">0</option>
                                  <option value="2">1-2</option>
                                  <option value="3">3+</option>
                                </select>
                              </div>
-                               <div>Preferred Breed: <input type ="text" id="breedname" value ="" maxlength = "50" /></label></div>
+                               <div>Preferred Breed: <input type ="text" id="breedname" value ="" maxlength = "50" required/></label></div>
  
-                              <div> Living Space: <input type ="text" id="space" value ="" maxlength = "50" /></label></div>
+                              <div> Living Space: <input type ="text" id="space" value ="" maxlength = "50" required/></label></div>
  
-                             <!-- <div>  Work Schedule: <div class="form-check">
-                                 <input class="form-check-input" type="radio" value="" id="flexCheckDefault">
-                                 <label class="form-check-label" for="flexCheckDefault">
-                                  Full-Time
-                                 </label>
+                            
+                               <div class="schedule">
+                                 
+                                 <label>Work Schedule:</label>
+                                 <div>
+                                   <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" required>
+                                      <label class="form-check-label" for="flexRadioDefault1">
+                                        Full-Time
+                                      </label>
+                                  </div>
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked required>
+                                      <label class="form-check-label" for="flexRadioDefault2">
+                                        Part-Time
+                                      </label>
+                                  </div>
+                                 </div>
                                </div>
-                             
-                           
-                             <div>  
-                               <input class="form-check-input" type="radio" value="" id="flexCheckChecked" checked>
-                                 <label class="form-check-label" for="flexCheckChecked">
-                                   Part-Time
-                                 </label><br>
-                               </div> -->
-                               <label>Work Schedule</label>
-                               <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                  Full-Time
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                  Part-Time
-                                </label>
-                              </div>
                                <input type = 'submit' value = 'Submit'>
                              </form> 
                 </div>

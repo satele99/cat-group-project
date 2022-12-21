@@ -96,4 +96,9 @@ textarea {
     justify-content: center;
     align-items: center;
     gap: 25px;
+} 
+
+.schedule {
+    display: flex;
+    gap: 25px;
 }
