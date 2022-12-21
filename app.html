@@ -43,12 +43,64 @@
 
                <!-- The separate boxes for the cat info and image -->
                     <!-- This is just so you can see the scrolling of the div -->
-               <div class = 'box a col-sm' style = "height:300px;width:120px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;" id="cat-names">
+               <div class = 'box a col-sm' style = "height:600px;width:120px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;" id="cat-names">
                     <!-- Sticky header so its not moving when scrolling -->
                     <nav class="navbar justify-content-center sticky-top navbar-dark bg-dark">
                         <a class="navbar-brand " href="#"><h3>Application</h3></a>
                       </nav>
                         <br>
+                        <form class="app">
+                          <div> Name: <input type ="text" id="aname" value ="" maxlength = "50" /></label><br></div>
+                          <div>
+                             <label for = 'rating'>Number of Children:</label>
+                              <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                    <option value="1">0</option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">3+</option>
+                                  </select>
+                               
+                             </div>
+                             <div>
+                              <label for = 'rating'>Number of Pets:</label>
+                               <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                 <option value="1">0</option>
+                                 <option value="2">1-2</option>
+                                 <option value="3">3+</option>
+                               </select>
+                             </div>
+                               <div>Preferred Breed: <input type ="text" id="breedname" value ="" maxlength = "50" /></label></div>
+ 
+                              <div> Living Space: <input type ="text" id="space" value ="" maxlength = "50" /></label></div>
+ 
+                             <!-- <div>  Work Schedule: <div class="form-check">
+                                 <input class="form-check-input" type="radio" value="" id="flexCheckDefault">
+                                 <label class="form-check-label" for="flexCheckDefault">
+                                  Full-Time
+                                 </label>
+                               </div>
+                             
+                           
+                             <div>  
+                               <input class="form-check-input" type="radio" value="" id="flexCheckChecked" checked>
+                                 <label class="form-check-label" for="flexCheckChecked">
+                                   Part-Time
+                                 </label><br>
+                               </div> -->
+                               <label>Work Schedule</label>
+                               <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                  Full-Time
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                  Part-Time
+                                </label>
+                              </div>
+                               <input type = 'submit' value = 'Submit'>
+                             </form> 
                 </div>
                 
         </div>
